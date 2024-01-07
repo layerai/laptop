@@ -28,7 +28,7 @@ Install
 Download the script:
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/layerai/laptop/main/mac
+curl --remote-name https://raw.githubusercontent.com/layerai/laptop/master/mac
 ```
 
 Review the script (avoid running scripts you haven't read!):
