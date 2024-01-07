@@ -114,11 +114,9 @@ Unix tools:
 # Programming languages, package managers, and configuration:
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Yarn] for managing JavaScript packages
-* [NVM] for managing node versions
 
 [Node.js]: http://nodejs.org/
 [Yarn]: https://yarnpkg.com/en/
-[NVM] https://formulae.brew.sh/formula/nvm
 
 Contributing
 ------------

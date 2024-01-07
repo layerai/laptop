@@ -161,9 +161,6 @@ brew "git-lfs"
 # Node
 brew "node"
 
-# Node Version Manager (NVM)
-brew "nvm"
-
 EOF
 
 # Open docker
