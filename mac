@@ -161,6 +161,7 @@ brew "node"
 EOF
 
 ## poetry (https://python-poetry.org/docs/#installing-with-the-official-installer)
+append_to_zshrc 'export PATH="$HOME/.local/bin:$PATH"'
 curl -sSL https://install.python-poetry.org | python3 -
 poetry self update 1.8.3
 
