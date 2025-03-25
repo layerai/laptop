@@ -148,25 +148,28 @@ brew "go-task"
 brew "pyenv"
 brew "pyenv-virtualenv"
 
-# Yarn
-brew "yarn"
-
 # Git large files
 brew "git-lfs"
 
-# Node
-brew "node"
-
 EOF
-
-## poetry (https://python-poetry.org/docs/#installing-with-the-official-installer)
-append_to_zshrc 'export PATH="$HOME/.local/bin:$PATH"'
-curl -sSL https://install.python-poetry.org | python3 -
-poetry self update 1.8.3
 
 append_to_zshrc 'export PYENV_ROOT="$HOME/.pyenv"'
 append_to_zshrc '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"'
 append_to_zshrc 'eval "$(pyenv init - zsh)"'
+append_to_zshrc 'eval "$(pyenv virtualenv-init -)"'
+
+if [ -w "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+else
+  source "$HOME/.zshrc"
+fi
+
+## poetry (https://python-poetry.org/docs/#installing-with-the-official-installer)
+append_to_zshrc 'export PATH="$HOME/.local/bin:$PATH"'
+curl -sSL https://install.python-poetry.org | python3 - --version 1.8.3
+
+# Node Version Manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 
 # Open docker
 open /Applications/Docker.app
