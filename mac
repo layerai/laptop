@@ -133,8 +133,12 @@ cask "google-chrome"
 # Google Cloud
 cask "google-cloud-sdk"
 
-# Kubernetes ClI
+# Kubernetes CLI
 brew "kubernetes-cli"
+brew "kubectx"
+
+# PostgresQL used mostly with tools
+brew "postgresql@14"
 
 # Programming language prerequisites
 brew "libyaml" # should come after openssl
