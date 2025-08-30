@@ -155,6 +155,16 @@ brew "pyenv-virtualenv"
 # Git large files
 brew "git-lfs"
 
+# Node canvas
+brew "pkg-config"
+brew "cairo"
+brew "pango"
+brew "libpng"
+brew "jpeg"
+brew "giflib"
+brew "librsvg"
+brew "pixman"
+
 EOF
 
 append_to_zshrc 'export PYENV_ROOT="$HOME/.pyenv"'
